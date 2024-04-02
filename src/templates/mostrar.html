@@ -1,0 +1,17 @@
+{% extends "./layout.html" %}
+{%block titulo%}
+<h1>Visualización de los productos</h1>
+{%endblock%}
+
+{% block body%}
+<h2>Lista de los productos</h2>
+<ul>
+    {% for nombre, detalle in productos.items() %}
+    <li>
+        <strong>Nombre:</strong> {{ nombre}}<br>
+        <strong>Precio:</strong> {{ detalle['precio'] }}<br>
+        <strong>Cantidad:</strong> {{ detalle['cantidad'] }}
+    </li>
+    {% endfor%}
+</ul>
+{% endblock%}
